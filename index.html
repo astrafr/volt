@@ -1,31 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Volt Bot</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Volt Bot — Discord Bot</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0f111b;
+    color: #e6e8f0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: #6f9fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #a2baff;
+  }
+
+  header {
+    padding: 2rem 1.5rem;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+
+  nav a {
+    margin-left: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: #abb2bf;
+    margin-bottom: 1.75rem;
+  }
+
+  .btn-invite {
+    background-color: #6f9fff;
+    color: #0f111b;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 9999px;
+    display: inline-block;
+    box-shadow: 0 8px 15px rgba(111, 159, 255, 0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-invite:hover {
+    background-color: #91b4ff;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #6f9fff;
+    padding-bottom: 0.25rem;
+  }
+
+  ul.commands-list {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+    column-gap: 3rem;
+  }
+
+  ul.commands-list li {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  ul.commands-list li strong {
+    color: #6f9fff;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #586069;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    ul.commands-list {
+      columns: 1;
+    }
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>⚡ Volt Bot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="commands.html">Commands</a>
-      <a href="https://discord.com/oauth2/authorize?client_id=1384569912453763224&scope=bot" target="_blank">Invite</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>The Ultimate Discord Bot</h2>
-      <p>Moderation, Fun, Utilities — all in one bot.</p>
-      <a href="https://discord.com/oauth2/authorize?client_id=1384569912453763224&scope=bot" class="btn">Invite to Server</a>
-    </section>
-  </main>
+<header>
+  <h1>Volt Bot</h1>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#commands">Commands</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot" target="_blank" rel="noopener noreferrer">Invite</a>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Volt Bot. All rights reserved.</p>
-  </footer>
+<main>
+  <section class="hero" id="features">
+    <h2>The Ultimate Discord Bot</h2>
+    <p>Fun, moderation, utilities — everything your server needs in one bot.</p>
+    <a
+      href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot"
+      class="btn-invite"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Invite Volt Bot</a
+    >
+  </section>
+
+  <section id="commands">
+    <h3>Fun Commands</h3>
+    <ul class="commands-list">
+      <li><strong>,compliment</strong> — Send a nice message</li>
+      <li><strong>,eightball</strong> — Ask the magic 8-ball</li>
+      <li><strong>,emoji</strong> — Get or spam emojis</li>
+      <li><strong>,flip</strong> — Flip a coin</li>
+      <li><strong>,hacker</strong> — Fake hacker fun</li>
+      <li><strong>,joke</strong> — Hear a random joke</li>
+      <li><strong>,mathmeme</strong> — Math memes to laugh</li>
+      <li><strong>,rate</strong> — Rate anything 1-10</li>
+      <li><strong>,rizz</strong> — Show your charm</li>
+      <li><strong>,roast</strong> — Friendly roasts</li>
+      <li><strong>,roll</strong> — Roll a dice</li>
+      <li><strong>,rps</strong> — Play rock-paper-scissors</li>
+      <li><strong>,saydumb</strong> — Say silly things</li>
+      <li><strong>,spamemoji</strong> — Emoji spam fun</li>
+      <li><strong>,to_gif</strong> — Convert images to GIFs</li>
+    </ul>
+
+    <h3>Moderation Commands</h3>
+    <ul class="commands-list">
+      <li><strong>,ban</strong> — Ban a user</li>
+      <li><strong>,clear</strong> — Delete messages</li>
+      <li><strong>,kick</strong> — Kick a user</li>
+      <li><strong>,lock</strong> — Lock a channel</li>
+      <li><strong>,mute</strong> — Mute someone</li>
+      <li><strong>,say</strong> — Make the bot say something</li>
+      <li><strong>,slowmode</strong> — Set slowmode</li>
+      <li><strong>,unban</strong> — Unban a user</li>
+      <li><strong>,unlock</strong> — Unlock a channel</li>
+      <li><strong>,unmute</strong> — Unmute someone</li>
+    </ul>
+
+    <h3>Miscellaneous</h3>
+    <ul class="commands-list">
+      <li><strong>,help</strong> — Show help message</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Volt Bot — Made with ⚡</p>
+</footer>
+
 </body>
 </html>
